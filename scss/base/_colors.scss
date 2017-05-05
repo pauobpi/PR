@@ -1,4 +1,4 @@
-// file: Functions
+// file: Colors.scss
 // Descript: 
 // version: v.1
 // Author: Citric
@@ -8,16 +8,19 @@
 // Table of contents
 // ============================
 
-// 01. FUNCTIONS
+// 01. 
 // ------------------------
+// 1.1 
 
 // ======================================================
-// 01. FUNCTIONS
+// 01. 
 // ======================================================
 
-//  1.1 getColor
+//  1.1 
 // --------------------------------------------------
 
-    @function getColor($color){
-        @return map-get($colors,$color);
-    }
+$colors : (
+  green : #41B883,
+  grey  : #35495E,
+  red   : #FD7575
+);

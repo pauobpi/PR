@@ -1,28 +1,23 @@
-
-import Firebase from './Firebase';
 import User from './User';
 
 export default class App {
 
     constructor(){
-        this.firebase   = new Firebase();
-        this.user       = new User(this.firebase);
+        this.user = new User(); 
     }
 
     // 1.1 User
     //-------------------------------------------------
-    userExistCurrent(){
-        this.user.getCurrentUser();
-    }
-
-    userLogIn(email,password){
-        this.user.login(email,password);
+    signIn(email,password,username){
+        return this.user.signIn(email,password,username);
     } 
 
     userLogOut(){
         this.user.logOut();  
     }
-    userName(){
+
+    getUsername(){
         this.user.getName();  
     }
+
 }  

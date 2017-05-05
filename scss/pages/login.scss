@@ -1,4 +1,4 @@
-// file: Functions
+// file: login.scss
 // Descript: 
 // version: v.1
 // Author: Citric
@@ -8,16 +8,21 @@
 // Table of contents
 // ============================
 
-// 01. FUNCTIONS
+// 01. LOGIN
 // ------------------------
 
+@import "../base/base";
+
 // ======================================================
-// 01. FUNCTIONS
+// 01. LOGIN
 // ======================================================
 
-//  1.1 getColor
-// --------------------------------------------------
-
-    @function getColor($color){
-        @return map-get($colors,$color);
+    .login{
+        &__errors{
+            display: none;
+            color: getColor(red);
+            &.active{
+                display: block;
+            }
+        }
     }

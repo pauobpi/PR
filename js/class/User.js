@@ -1,59 +1,61 @@
 export default class User {
-    constructor(firebase) {
-        this.firebase = firebase;
+
+    constructor() {
         this.user = null;
     }
 
-    // 1.1 Getters
+    // 1.1. Getters
     //-------------------------------------------------
-    getId() {
-        return this.user.uid;
-    }
 
-    getEmail() {
-        return this.user.email;
-    }
-
-    getName() {
-        console.log(this.user.displayName);
-        return this.user.displayName;
-    }
+        getName(){
+            return this.user
+        }
 
     // 1.2. Methods
     //-------------------------------------------------
 
-    login(email, password) {
-        this.firebase.auth().signInWithEmailAndPassword(email, password)
-            .then(() => {
-                this.getCurrentUser();
-            })
-            .catch(function (error) {
-                console.log(error.message);
-            });
-    }
-
-    getCurrentUser() {
-        let user = this.firebase.auth().currentUser;
-        if (user != null) {
-            this.user = user;
-            this._updateUserDisplayName();
-            window.location = '/#/';
-        } else {
-            window.location = '/#/login';
+        signIn(email, password, username) {
+            let validateUser = this._validateUser(email,password);
+            if(validateUser == true){
+                this.user = [username,email];
+                window.location = '/#/banc';
+            }else{
+                return validateUser;
+            }
         }
-    }
 
-    _updateUserDisplayName() {
-        let splitEmail = this.user.email.split('.');
-        let displayName = splitEmail[0] + ' ' + splitEmail[1];
-        this.user.updateProfile({ displayName: displayName });
-    }
+        _validateUser(email,pass){
+            let arrayListError = [];
+            let testingEmail = this._testRegex(email,'email'); 
+            let testingPass  = this._testRegex(pass,'pass');
+            
+            if(testingEmail && testingPass){
+                return true;
+            }else{ 
+                if(!testingEmail){
+                    arrayListError.push('email');
+                }
+                if(!testingPass){
+                    arrayListError.push('pass');
+                }
+                return arrayListError;
+            }
+        }
 
-    logOut() {
-        this.firebase.auth().signOut().then(function () {
-            window.location = '/#/login';
-        }, function (error) {
-            console.log(error);
-        });
-    }
+        _testRegex(word,type){
+            let re;
+
+            if(type=="email"){
+                 re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            }else if(type=="pass"){
+                re = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+            }
+
+            return re.test(word);
+
+        }
+        
+        logOut() {
+            window.location = '/#/';
+        }
 }
