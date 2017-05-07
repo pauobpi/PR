@@ -16,13 +16,45 @@
 // ======================================================
 // 01. LOGIN
 // ======================================================
-
-    .login{
-        &__errors{
-            display: none;
-            color: getColor(red);
-            &.active{
-                display: block;
+    .login--page{
+        width: 978px;
+        margin: 0 auto;
+        .login--cont.col-6{
+            width: calc(50% - 100px);
+        }
+        .login--cont{
+            padding: 50px 30px;
+            background: getColor(white);
+            
+            .h3{ 
+                margin-bottom: 20px; 
+                text-align: center;
+                width: 100%; 
+            }
+            .h4{
+                margin: 15px 0 5px;
+            }
+            .subtitle{ 
+                margin-bottom: 30px; 
+                text-align: center;
+                width: 100%; 
+            }
+            .login{
+                
+                &__errors{
+                    display: none;
+                    color: getColor(red);
+                    font-size: getSize(p--small);
+                    display: none;
+                    &.active{
+                        display: inline;
+                    }
+                }
+                .btn--red{
+                    margin-top: 30px;
+                    display: inline-block;
+                }
             }
         }
+       
     }

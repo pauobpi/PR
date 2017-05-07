@@ -1,22 +1,35 @@
 <template>
-    <div>
-        <ul class="login">
-            <li>
-                <input type="text" v-model="username" placeholder="Nom complet">
-                <p class="login__errors" :class="{ active: smsErrorUsername }">Cal un nom d'usuari</p>
-            </li>
-            <li>
-                <input type="text" v-model="email" placeholder="Email">
-                <p  class="login__errors" :class="{ active: smsErrorEmail }">El mail ha de ser vàlid</p>
-            </li>
-            <li>
-                <input type="text" v-model="password" placeholder="password">
-                <p  class="login__errors" :class="{ active: smsErrorPass }">La clau d'access ha de contindre minim 8 caràcters un dels quals un nombre </p>
-            </li>
-            <li v-on:click="signIn">Registrar-se</li> 
-        </ul>  
+    <div class="login--page">
+        <div class="login--cont col-6 ">
+            <h3 class="h3">Registre d'usuari</h3>
+            <p class="label subtitle">Enregistra't a la nostra aplicació</p>
+
+            <ul class="login">
+                <li>
+                    <label class="label">Nom </label><p class="login__errors" :class="{ active: smsErrorUsername }"> · Cal un nom d'usuari</p>
+                    <input class="input" type="text" v-model="username" placeholder="Nom complet">
+                    
+                </li>
+                <li>
+                    <label class="label">Email </label><p class="login__errors" :class="{ active: smsErrorEmail }"> · El mail ha de ser vàlid</p>
+                    <input class="input" type="text" v-model="email" placeholder="elseuemail@exemple.com">
+                    
+                </li>
+                <li>
+                    <label class="label">Password </label><p class="login__errors" :class="{ active: smsErrorPass }"> ·Mínim 8 caràcters. Un d'ells, un nombre </p>
+                    <input class="input" type="text" v-model="password" placeholder="Clau de pas">
+                   
+                </li>
+                <li class="text--center" v-on:click="signIn">
+                    <span class="btn--red">Registrar-se</span>
+                </li>
+            </ul>
+        </div>
+        <div class="col-6">
+
+        </div>
     </div>
-</template> 
+</template>
 
 <script>
 
@@ -55,7 +68,7 @@
                     this.smsErrorEmail = false;
                     this.smsErrorPass  = false;
                     this.smsErrorUsername = false;
-                    
+
                     errors.forEach((element)=>{
                         if(element == 'email'){
                             this.smsErrorEmail = true;

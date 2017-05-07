@@ -24,13 +24,13 @@ gulp.task('webpack', function () {
 });
 
 gulp.task('sass', function () {
-    return gulp.src('./scss/**/*.scss')
+    return gulp.src('./scss/main.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(gulp.dest(myRoute+'/css'));
 });
 
 gulp.task('sass:watch', function () {
-    gulp.watch('./sass/**/*.scss', ['sass']);
+    gulp.watch('./scss/**/*.scss', ['sass']);
 });
 
 gulp.task('watch', ['sass','webpack'],function () {

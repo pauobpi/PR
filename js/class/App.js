@@ -6,7 +6,7 @@ export default class App {
         this.user = new User(); 
     }
 
-    // 1.1 User
+    // 1.1 Login
     //-------------------------------------------------
     signIn(email,password,username){
         return this.user.signIn(email,password,username);
@@ -16,8 +16,14 @@ export default class App {
         this.user.logOut();  
     }
 
-    getUsername(){
-        this.user.getName();  
+    userGetName(){
+         return this.user.getName();  
+    }
+
+    // 1.2 Banc
+    //-------------------------------------------------
+    bancValidation(card,month,year){
+        return this.user.banc(card,month,year);  
     }
 
 }  

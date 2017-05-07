@@ -21,3 +21,10 @@
     @function getColor($color){
         @return map-get($colors,$color);
     }
+
+//  1.1 getSize
+// --------------------------------------------------
+
+    @function getSize($size){
+        @return map-get($sizes,$size);
+    } 

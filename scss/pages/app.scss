@@ -1,0 +1,154 @@
+@import "./base/base";
+
+.menu{
+    height: calc(100% - 100px);
+    position: absolute;
+    width: 220px;
+    background: getColor(red--hover);
+    padding: 20px 20px 20px 0;
+    &__list{
+        color: getColor(white);
+        opacity: .8;
+        font-size: 15px;
+        padding: 5px 0 5px 20px;
+        margin-bottom: 3px;
+        cursor: pointer;
+        border-radius: 0 10px 10px 0;
+        display: block;
+        &:hover{
+            background: getColor(red);
+            color: getColor(white);
+            opacity:1;
+        }
+        &.active{
+            background: getColor(blue);
+            opacity: 1;
+        }
+        .fa{
+            margin-right: 5px;
+        }
+    }
+}
+
+.content{
+    position: absolute;
+    left: 240px;
+    width: calc(100% - 280px);
+    height: calc(100% - 100px);
+    padding: 20px;
+    &--white{
+        background: getColor(white);
+        position: relative;
+        width: calc(100% - 30px);
+        height: calc(100% - 60px);
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 30px 30px 30px 0;
+        .h2{
+            margin-bottom: 38px;
+            padding-left: 30px;
+        }
+    }
+}
+
+
+.header{
+    width: 100%;
+    height: 60px;
+    background: getColor(white);
+    &__logo{
+        background: url(../img/logo.svg) no-repeat;
+        width: 160px;
+        height: 50px;
+        position: absolute;
+        left: 15px;
+        background-size: 100%;
+        top: 19px;
+    }
+    &__submenu{
+        position: relative;
+        float: right;
+        margin: 10px 20px 0 0;
+        .submenu__add{
+            font-size: getSize(p);
+            float: right;
+            margin: 2px 0 0 20px;
+            .fa{
+                margin-right: 5px; 
+            }
+        }
+        .submenu__search{
+            float: left;
+            .fa{
+                position: absolute;
+                top: 11px;
+                left: 12px;
+                color: getColor(grey);
+            }
+            .input{
+                padding: 8px 5px 8px 30px;
+                margin-top: 3px;
+                width: 200px;
+            }
+        }
+        .submenu__avatar{
+            float: right;
+            color: getColor(red);
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            margin-left: 10px;
+            @include border(1,red);
+            border-radius: 50%;
+        }
+    }
+    
+}
+
+.modal{
+    display: none;
+    .modal--content{
+        background: getColor(white);
+        @include modal(400);
+        z-index: 200;
+        &.organize-modal{
+            @include modal(208);
+        }
+        .select{
+            width: 100%;
+        }
+        .subtitle{
+            margin-bottom: 20px;
+        }
+        .import{
+            margin-top: 20px;
+            .input{
+                width: 60px;
+                padding: 15px;
+                text-align: center;
+                font-size: 16px;
+            }
+            p{
+                display: inline-block;
+                padding: 0 10px;
+                font-size: 16px;
+            }
+        }
+        .modal-btns{
+            margin-top: 40px;
+        }
+    }
+    .modal--bg{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: getColor(white);
+        z-index: 199;
+        opacity: .7;
+    }
+    &.active{
+        display: block;
+    }
+    
+}

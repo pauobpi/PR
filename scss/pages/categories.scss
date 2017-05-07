@@ -1,0 +1,71 @@
+@import "./base/base";
+
+.categories{
+    .spend-list__new-spend{
+        position: absolute;
+        right: 35px;
+        top: 32px;
+    }
+    .spend-list{
+        width: 200px;
+        overflow: auto;
+        height: calc(100% - 60px);
+        &__li{
+            padding: 10px 10px 10px 30px;
+            box-shadow: 0 1px 2px rgba(0,0,0,.15);
+            border-radius: 0 20px 20px 0;
+            margin-bottom: 4px;
+            background: getColor(grey);
+            cursor: pointer;
+            &:hover, &.active{
+                background: getColor(red);
+                color: getColor(white);
+            }
+        }
+    }
+    .spend{
+        position: absolute;
+        left: 230px;
+        top: 98px;
+        width: calc(100% - 265px);
+        height: calc(100% - 130px);
+        overflow: auto;
+        &__li{
+            padding: 12px 20px;
+            position: relative;
+            background: getColor(f5);
+            .spend__h3{ 
+                font-size: 16px;
+            }
+            .spend__info{ 
+                font-size: getSize(p); 
+                width: calc(100% - 90px);
+            }
+            .spend__money{
+                position: absolute;
+                right: 15px;
+                top: 10px;
+                font-size: 20px;
+            }
+            .spend__data{
+                position: absolute;
+                right: 0;
+                padding: 0 15px 0 10px;
+                top: 40px;
+                border-radius:20px 0 0 20px;
+                background: getColor(grey);
+                font-size: getSize(p);
+                color: getColor(black-soft);
+                font-size: 11px;
+                font-weight: 400;
+            }
+            &:nth-child(2n){
+                background: getColor(grey);
+                .spend__data{
+                    background: getColor(f5);
+                }
+            }
+        }
+       
+    }
+}

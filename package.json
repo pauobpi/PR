@@ -40,6 +40,8 @@
     "vue-router": "^2.5.2",
     "vue-template-compiler": "^2.3.0",
     "webpack": "^2.2.1",
-    "yargs": "^7.0.2"
+    "yargs": "^7.0.2",
+    "jquery": "^3.1.1",
+    "jquery-ui": "^1.12.1"
   }
 }

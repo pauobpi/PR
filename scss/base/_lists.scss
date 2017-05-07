@@ -20,7 +20,25 @@
 // --------------------------------------------------
 
 $colors : (
-  green : #41B883,
-  grey  : #35495E,
-  red   : #FD7575
+  white: #fff,
+  green   : #41B883,
+  grey    : #E7ECF3,
+  grey--dark: #D4DCE6,
+  red     : #ff6161,
+  red--hover: #EE5656,
+  blue    : #1C96FE,
+  black--soft   : #666,
+  black: #333,
+  f5: #f9f9f9,
+  blue--hover: #55B1FE,
+  yellow: #FDCB75
+);
+
+$sizes : ( 
+  h1: 26px,
+  h2: 22px,
+  h3: 18px,
+  h4: 14px,
+  p: 14px,
+  p--small: 11px
 );

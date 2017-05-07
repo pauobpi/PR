@@ -1,0 +1,175 @@
+
+@import "./base/base";
+
+
+// 1.1 Body
+// -------------------------------------------
+
+body{
+    font-family: 'Open Sans';
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: getColor(red);
+    color: getColor(black--soft);
+}
+
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: getColor(grey--dark);
+  font-size: getSize(p);
+  font-family: 'Open Sans'; 
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: getColor(grey--dark);
+  font-size: getSize(p);
+  font-family: 'Open Sans';
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: getColor(grey--dark);
+  font-size: getSize(p);
+  font-family: 'Open Sans';
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: getColor(grey--dark);
+  font-size: getSize(p);
+  font-family: 'Open Sans';
+}
+
+// 1.2 Text
+// -------------------------------------------
+.h1{
+    font-size: getSize(h1);
+    margin-bottom: 2px;
+}
+.h2{
+    font-size: getSize(h2);
+    margin-bottom: 2px;
+    color:  getColor(black);
+}
+.h3{
+    font-size: getSize(h3);
+    margin-bottom: 2px;
+}
+.h4{
+    font-size: getSize(h4);
+}
+p,h1,h2,h3{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.col-12{
+    width: 100%;
+    float: left;
+}
+
+.col-6{
+    width: 50%;
+    float: left;
+}
+
+.col-4{
+    width: 33%;
+    float: left;
+}
+
+// 1.3 Cols
+// -------------------------------------------
+
+.col-3{
+    width: 25% !important;
+    float: left;
+}
+
+.col-2{
+    width: 15%;
+    float: left;
+}
+
+
+.btn--red{
+    @include btn('large',red,white,red--hover,white);
+}
+.btn--gray{
+    @include btn('large',gray,blue,gary--dark,blue);
+}
+
+.btn--blue{
+    @include btn('large',blue,white,blue--hover,white);
+    font-size: getSize(p);
+}
+
+
+
+
+.text--center{
+    text-align: center;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li{
+        display: block;
+    }
+}
+
+.input{
+    @include border(1,grey) ;
+    padding: 10px;
+    border-radius: 4px;
+    width: calc(100% - 12px);
+    margin-bottom: 10px;
+    font-size: getSize(p);
+    &:focus{ 
+        outline: none; 
+        @include border(1,blue) ;
+    }
+}
+
+.select{
+    appearance: none;
+    -webkit-appearance: none;
+    @include border(1,grey) ;
+    padding: 10px;
+    border-radius: 4px;
+    width: calc(100% - 12px);
+    margin-bottom: 10px;
+    font-size: getSize(h4);
+    &:focus{ 
+        outline: none;
+        @include border(1,blue) ;
+    }
+}
+
+.label{
+    font-size: getSize(p);
+    margin-bottom: 3px;
+    display: inline-block;
+    position: relative;
+}
+
+input[type="radio"]{ display: none;}
+
+.radio {
+    &+ label{
+        padding: 10px 20px;
+        display: inline-block;
+        @include border(1,white);
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: getSize(p);
+    }
+
+    &:checked + label{
+       color: getColor(blue);
+       @include border(1,blue);
+
+    }	
+}
