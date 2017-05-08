@@ -9,6 +9,7 @@ body{
     box-sizing: border-box;
     background: getColor(red);
     color: getColor(black--soft);
+    overflow: hidden;
 }
 
 
@@ -120,7 +121,7 @@ ul{
     @include border(1,grey) ;
     padding: 10px;
     border-radius: 4px;
-    width: calc(100% - 12px);
+    width: calc(100% - 21px);
     margin-bottom: 10px;
     font-size: getSize(p);
     &:focus{ 

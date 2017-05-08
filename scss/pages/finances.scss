@@ -56,3 +56,11 @@
     @extend %opt;
     background: getColor(yellow);
 }
+
+.grafic{
+    margin-top: 108px;
+    position: relative;
+    img{
+        width: 100%;
+    }
+}

@@ -94,7 +94,7 @@
                     display: none;
                 }
                 &:focus{
-                    &+.submenu__autocomplete{
+                    &+.submenu__autocomplete.active{
                         display: block;
                     }
                 }
@@ -136,7 +136,7 @@
     display: none;
     .modal--content{
         background: getColor(white);
-        @include modal(400);
+        @include modal(470);
         z-index: 200;
         &.organize-modal{
             @include modal(208);
@@ -145,10 +145,10 @@
             width: 100%;
         }
         .subtitle{
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
         .import{
-            margin-top: 20px;
+            margin: 20px 0 40px;
             .input{
                 width: 60px;
                 padding: 15px;
@@ -178,3 +178,80 @@
     }
     
 }
+
+
+.fa-info-circle{ 
+    font-size: 17px; 
+    &:hover{
+         .tooltip{
+            display: block;
+        }  
+    }
+     
+}
+.tooltip{
+    display:block;
+    background: getColor(black);
+    color: getColor(white);
+    position: absolute;
+    width: 120px;
+    z-index: 1;
+    padding: 20px;
+    font-family: 'Open Sans';
+    font-size: 12px;
+    line-height: 17px;
+    top: 40px;
+    left: 278px;
+    display: none;
+}
+
+.sms{
+    display:block;
+    background: getColor(blue--dark);
+    color: getColor(white);
+    position: absolute;
+    width: 260px;
+    z-index: 1;
+    padding: 20px;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    line-height: 17px;
+    bottom: 20px;
+    left: 15px;
+    display: none;
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+    border-radius: 4px;
+    &.active{
+        display: block;
+        animation-name: anime__modal;
+     	animation-duration: 5s;
+        animation-fill-mode: forwards;
+    }
+}
+
+
+@keyframes anime__modal {
+    0% {
+        opacity: 0;
+        display: block;
+        visibility: hidden;
+        transform: translateY(200px);
+    }
+    10% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    90% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+        transform: translateY(200px);
+    }
+}
+

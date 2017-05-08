@@ -28,7 +28,7 @@ export default class User {
             let validateBanc = this._validateBanc(card,month,year);
           
             if(validateBanc == true){
-                window.location = '/#/app';
+                window.location = '/#/organize';
             }else{
                 return validateBanc;
             }

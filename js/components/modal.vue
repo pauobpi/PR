@@ -24,7 +24,7 @@
                       
                         <li>
                             <label class="label">Concepte</label>
-                            <input type="text" class="input" >
+                            <input type="text" class="input" v-model="movement" >
                         </li>
                          <li>
                             <label class="label">Afegir a categoria (opcional)</label>
@@ -38,7 +38,7 @@
                         </li>
                         <li class="col-12 text--center modal-btns">
                             <span class="btn--gray" v-on:click="cancelModal">Cancel·lar</span>
-                            <span class="btn--red" v-on:click="link">Crear</span>
+                            <span class="btn--red" v-on:click="createMovment">Crear</span>
                         </li>
                     </ul>
                 </div>
@@ -71,7 +71,8 @@
     export default {
         data () {
             return {
-               category: ''
+               category: '',
+               movement: ''
             } 
         },
         methods:{
@@ -83,6 +84,9 @@
             },
             createCategory(){
                 this.$parent.createCategory(this.category);
+            },
+            createMovment(){
+                this.$parent.createMovment(this.movement);
             }
         },
         props: ['modal']

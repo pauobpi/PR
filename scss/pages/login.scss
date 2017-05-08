@@ -57,3 +57,30 @@
         }
        
     }
+
+.image--login{
+    background: url('../img/mica.jpg');
+    height: 482px;
+    background-size: cover;
+}
+.image--login2{
+    background: url('../img/mica2.jpg');
+    height: 521px;
+    background-size: cover;
+}
+
+.login--group{
+    position: absolute;
+    width: 978px;
+    left: 50%;
+    margin: -241px 0 0 -489px;
+    top: 50%;
+}
+
+.banc--group{
+    position: absolute;
+    width: 978px;
+    left: 50%;
+    margin: -241px 0 0 -489px;
+    top: 50%;
+}

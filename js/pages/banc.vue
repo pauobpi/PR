@@ -1,7 +1,7 @@
 <template>
-    <div class="login--page">
-        <div class="col-6">
-            dafds
+    <div class="login--page banc--group">
+         <div class="col-6 image--login2">
+            
         </div>
         <div class="login--cont col-6">
             <div class="login">

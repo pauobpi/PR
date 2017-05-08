@@ -1,6 +1,6 @@
 <template>
-    <div class="login--page">
-        <div class="login--cont col-6 ">
+    <div class="login--page login--group">
+        <div class="login--cont col-6">
             <h3 class="h3">Registre d'usuari</h3>
             <p class="label subtitle">Enregistra't a la nostra aplicació</p>
 
@@ -25,8 +25,8 @@
                 </li>
             </ul>
         </div>
-        <div class="col-6">
-
+        <div class="col-6 image--login">
+            
         </div>
     </div>
 </template>

@@ -3,8 +3,15 @@
 .categories{
     .spend-list__new-spend{
         position: absolute;
-        right: 35px;
-        top: 32px;
+        right: 38px;
+        top: 38px;
+        cursor: pointer;
+        i{
+            margin-right: 5px;
+        }
+        &:hover{
+            color: getColor(blue);
+        }
     }
     .spend-list{
         width: 200px;
@@ -29,11 +36,20 @@
         top: 98px;
         width: calc(100% - 265px);
         height: calc(100% - 130px);
-        overflow: auto;
         &__li{
             padding: 12px 20px;
             position: relative;
             background: getColor(f5);
+            .spend__handler{
+                float: left;
+                position: relative;
+                height: 43px;
+                width: 30px;
+                line-height: 40px;
+                text-align: center;
+                left: -8px;
+                cursor: move;
+            }
             .spend__h3{ 
                 font-size: 16px;
             }
@@ -68,4 +84,10 @@
         }
        
     }
+}
+
+.ui-droppable-hover{
+    background: getColor(yellow) !important;
+    color: getColor(white);
+    
 }

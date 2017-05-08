@@ -2,6 +2,7 @@
     <div>
         <modalCo class="modal" :modal="modal" :class="{ active: activeModal }"></modalCo>
         <headerCo></headerCo>
+        <smsCo :sms="sms"></smsCo>
         <menuCo :active="'app'"></menuCo>
         <div class="content">
             <div class="content--white"></div>
@@ -15,6 +16,7 @@
     import menuCo from '../components/menu.vue';
     import headerCo from '../components/header.vue';
     import modalCo from '../components/modal.vue';
+    import smsCo from '../components/sms.vue';
 
     export default {
         data () {
@@ -30,12 +32,16 @@
             },
             cancelModal(){
                 this.activeModal = false;
+            },
+            createMovement(){
+                this.activeModal = false;
             }
         },
         components:{
             menuCo,
             headerCo,
-            modalCo
+            modalCo,
+            smsCo
         }
     }
 

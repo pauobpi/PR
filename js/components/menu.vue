@@ -9,7 +9,7 @@
                     </li>
                     <li>
                         <a class="menu__list" href="/#/statics">
-                            <i class="fa fa-bar-chart" aria-hidden="true"></i>Info. Finançera
+                            <i class="fa fa-bar-chart" aria-hidden="true"></i>Info. Financera
                         </a>
                     </li>
                 </ul>
@@ -23,7 +23,7 @@
                     </li>
                     <li>
                         <a class="menu__list active" href="/#/statics">
-                            <i class="fa fa-bar-chart" aria-hidden="true"></i>Info. Finançera
+                            <i class="fa fa-bar-chart" aria-hidden="true"></i>Info. Financera
                         </a>
                     </li>
                 </ul>
@@ -37,7 +37,7 @@
                     </li>
                     <li>
                         <a class="menu__list" href="/#/statics">
-                            <i class="fa fa-bar-chart" aria-hidden="true"></i>Info. Finançera
+                            <i class="fa fa-bar-chart" aria-hidden="true"></i>Info. Financera
                         </a>
                     </li>
                 </ul> 

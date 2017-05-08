@@ -1,5 +1,6 @@
 <template>
     <div>
+        <smsCo :sms="sms"></smsCo>
         <modalCo class="modal" :modal="modal" :class="{ active: activeModal }"></modalCo>
         <headerCo></headerCo>
         <menuCo :active="'finan'"></menuCo>
@@ -18,7 +19,7 @@
                     <span class="pluser" @click="activeSelects" :class="{ desactive: desactivePlus }"><i class="fa fa-plus"></i></span>
                 </ul>
                 <div class="grafic">
-
+                    <img :src="image" alt="">
                 </div>
             </div>
         </div>
@@ -31,6 +32,7 @@
     import menuCo from '../components/menu.vue';
     import headerCo from '../components/header.vue';
     import modalCo from '../components/modal.vue';
+    import smsCo from '../components/sms.vue';
 
     export default {
         data () {
@@ -43,7 +45,8 @@
                     { color: 'opt--yellow',active: false}
                ],
                desactivePlus: false,
-               count: 0
+               count: 0,
+               image: 'img/art1.png'
             }
         },
         methods:{
@@ -61,22 +64,27 @@
                         el.active = true;
                         i = 1;
                         this.count++;
+                        this.image = 'img/art'+(this.count+1)+'.png';
                     }
                 });
 
                 if(this.count === 2){
-                    console.log('llego');
                     this.desactivePlus = true;
                 }else{
                     this.desactivePlus = false;
                 }
                 i= 0;
+            },
+            createMovment(moovement){
+                this.activeModal = false;
+                this.sms = "El moviment "+moovement+", s'ha creat correctament";
             }
         },
         components:{
             menuCo,
             headerCo,
-            modalCo
+            modalCo,
+            smsCo
         }
     }
 
