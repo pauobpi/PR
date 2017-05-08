@@ -114,7 +114,7 @@
                 }
             },
             salt(){
-                 window.location = '#/app';
+                 window.location = '#/organize';
             },
             _catchErrors(errors){
                  if(errors){
