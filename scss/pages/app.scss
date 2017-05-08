@@ -1,4 +1,4 @@
-@import "./base/base";
+
 
 .menu{
     height: calc(100% - 100px);
@@ -15,8 +15,8 @@
         cursor: pointer;
         border-radius: 0 10px 10px 0;
         display: block;
-        &:hover{
-            background: getColor(red);
+        &:hover{ 
+            background: getColor(red);  
             color: getColor(white);
             opacity:1;
         }
@@ -79,6 +79,7 @@
         }
         .submenu__search{
             float: left;
+            position: relative;
             .fa{
                 position: absolute;
                 top: 11px;
@@ -89,6 +90,31 @@
                 padding: 8px 5px 8px 30px;
                 margin-top: 3px;
                 width: 200px;
+                &+.submenu__autocomplete{
+                    display: none;
+                }
+                &:focus{
+                    &+.submenu__autocomplete{
+                        display: block;
+                    }
+                }
+            }
+            .submenu__autocomplete{
+                position: absolute;
+                top: 40px;
+                width: 235px;
+                z-index: 100;
+                background: getColor(white);
+                @include border(1, grey);
+                .autocomplete__list{
+                    cursor: pointer;
+                    padding: 8px 10px;
+                    @include border(1, grey,'bottom');
+                    &:hover{
+                        background: getColor(blue);
+                        color: getColor(white);
+                    }
+                }
             }
         }
         .submenu__avatar{

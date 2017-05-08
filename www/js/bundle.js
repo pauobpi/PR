@@ -2587,7 +2587,7 @@
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "/Users/pauobrador/Library/Mobile Documents/com~apple~CloudDocs/proyectos/PR/js/pages/app.vue"
+	Component.options.__file = "/Users/pau.obrador/atrapalo/formacion/PR/js/pages/app.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] app.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -2925,7 +2925,7 @@
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "/Users/pauobrador/Library/Mobile Documents/com~apple~CloudDocs/proyectos/PR/js/components/menu.vue"
+	Component.options.__file = "/Users/pau.obrador/atrapalo/formacion/PR/js/components/menu.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] menu.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -3113,7 +3113,7 @@
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "/Users/pauobrador/Library/Mobile Documents/com~apple~CloudDocs/proyectos/PR/js/components/header.vue"
+	Component.options.__file = "/Users/pau.obrador/atrapalo/formacion/PR/js/components/header.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] header.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -3250,7 +3250,7 @@
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "/Users/pauobrador/Library/Mobile Documents/com~apple~CloudDocs/proyectos/PR/js/components/modal.vue"
+	Component.options.__file = "/Users/pau.obrador/atrapalo/formacion/PR/js/components/modal.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] modal.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -3562,7 +3562,7 @@
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "/Users/pauobrador/Library/Mobile Documents/com~apple~CloudDocs/proyectos/PR/js/pages/signin.vue"
+	Component.options.__file = "/Users/pau.obrador/atrapalo/formacion/PR/js/pages/signin.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] signin.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -3812,7 +3812,7 @@
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "/Users/pauobrador/Library/Mobile Documents/com~apple~CloudDocs/proyectos/PR/js/pages/banc.vue"
+	Component.options.__file = "/Users/pau.obrador/atrapalo/formacion/PR/js/pages/banc.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] banc.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -4193,7 +4193,7 @@
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "/Users/pauobrador/Library/Mobile Documents/com~apple~CloudDocs/proyectos/PR/js/pages/organize.vue"
+	Component.options.__file = "/Users/pau.obrador/atrapalo/formacion/PR/js/pages/organize.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] organize.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -4434,7 +4434,7 @@
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "/Users/pauobrador/Library/Mobile Documents/com~apple~CloudDocs/proyectos/PR/js/pages/statics.vue"
+	Component.options.__file = "/Users/pau.obrador/atrapalo/formacion/PR/js/pages/statics.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] statics.vue: functional components are not supported with templates, they should use render functions.")}
 

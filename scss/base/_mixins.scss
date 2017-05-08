@@ -63,9 +63,9 @@
 	// --------------------------------------------------
 
 		@mixin modal($height){
-			width: 450px;
+			width: 320px;
 			height: $height+px;
-			margin-left: -(450/2)+px;
+			margin-left: -(320/2)+px;
 			left: 50%;
 			position: absolute;
 			top: 10%;
