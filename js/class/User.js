@@ -18,7 +18,7 @@ export default class User {
             let validateUser = this._validateUser(email,password);
             if(validateUser == true){
                 this.user = [username];
-                window.location = '/#/banc';
+                window.location = 'PR/www/#/banc';
             }else{
                 return validateUser;
             }
@@ -28,7 +28,7 @@ export default class User {
             let validateBanc = this._validateBanc(card,month,year);
           
             if(validateBanc == true){
-                window.location = '/#/organize';
+                window.location = 'PR/www/#/organize';
             }else{
                 return validateBanc;
             }
@@ -82,6 +82,6 @@ export default class User {
         }
         
         logOut() {
-            window.location = '/#/';
+            window.location = 'PR/www/#/';
         }
 }

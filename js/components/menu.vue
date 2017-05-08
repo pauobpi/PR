@@ -3,12 +3,12 @@
             <div v-if="active === 'org'">
                 <ul>
                     <li>
-                        <a class="menu__list active" href="/#/organize">
+                        <a class="menu__list active" href="PR/www/#/organize">
                             <i class="fa fa-sitemap" aria-hidden="true"></i>Organitzar despeses
                         </a>
                     </li>
                     <li>
-                        <a class="menu__list" href="/#/statics">
+                        <a class="menu__list" href="PR/www/#/statics">
                             <i class="fa fa-bar-chart" aria-hidden="true"></i>Info. Financera
                         </a>
                     </li>
@@ -17,12 +17,12 @@
             <div v-if="active === 'finan'">
                 <ul>   
                     <li>
-                        <a class="menu__list" href="/#/organize">
+                        <a class="menu__list" href="PR/www/#/organize">
                             <i class="fa fa-sitemap" aria-hidden="true"></i>Organitzar despeses
                         </a>
                     </li>
                     <li>
-                        <a class="menu__list active" href="/#/statics">
+                        <a class="menu__list active" href="PR/www/#/statics">
                             <i class="fa fa-bar-chart" aria-hidden="true"></i>Info. Financera
                         </a>
                     </li>
@@ -31,12 +31,12 @@
             <div v-if="active === 'app'">
                 <ul> 
                     <li>
-                        <a class="menu__list" href="/#/organize">
+                        <a class="menu__list" href="PR/www/#/organize">
                             <i class="fa fa-sitemap" aria-hidden="true"></i>Organitzar despeses
                         </a>
                     </li>
                     <li>
-                        <a class="menu__list" href="/#/statics">
+                        <a class="menu__list" href="PR/www/#/statics">
                             <i class="fa fa-bar-chart" aria-hidden="true"></i>Info. Financera
                         </a>
                     </li>
