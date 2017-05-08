@@ -114,7 +114,7 @@
                 }
             },
             salt(){
-                 window.location = 'PR/www/#/organize';
+                 window.location = '#/app';
             },
             _catchErrors(errors){
                  if(errors){
