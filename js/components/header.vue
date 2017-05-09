@@ -1,7 +1,7 @@
 <template>
     <div>
         <header class="header">
-            <a href="PR/www/#/organize" class="header__logo"></a>
+            <a href="#/organize" class="header__logo"></a>
             <ul class="header__submenu">
                 <li class="submenu__avatar"><span class="fa fa-user"></span></li>
                 <li class="submenu__add btn--red" v-on:click="activeModal"><span class="fa fa-plus"></span>Afegir</li>
